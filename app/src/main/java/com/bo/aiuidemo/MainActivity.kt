@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
     private fun login() {
         HttpUtils.createApiService()!!
                 .login(LoginReq("login", LoginReqParams("9F97E500-DDEE-4018-AD91-96617C6E1653", "login",
-                        "cmrh1875", "zhangs")))
+                        "Test@123456", "zhangs")))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : Observer<LoginBean> {
