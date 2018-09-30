@@ -43,6 +43,8 @@
         </activity>
         <activity android:name=".utils.LiveDataActivity">
         </activity>
+        <activity android:name=".WebViewActivity">
+        </activity>
     </application>
 
 </manifest>
