@@ -120,10 +120,10 @@ class MainActivity : AppCompatActivity() {
     private fun applyLeave(date: String, count: String) {
         stopTTs()
         stopRecord()
-        HttpUtils.createApiService()!!.applyForLeave(HttpUtils.getHeader(), ApplyForLeaveReq("zhangs",
+        HttpUtils.createApiService()!!.applyForLeave(HttpUtils.getHeader(), ApplyForLeaveReq("465798",
                 "AI 语音请假测试", "休假申请", date, 90,
                 mutableListOf(LeaveTime("\"2018-07-29 09:00:00\"", "\"2018-07-29 18:00:00\"")), count
-                , "上午", 10, "17688458611", "深圳蛇口"))
+                , "上午", 10, "17688458611", "ader"))
                 .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : Observer<BaseResponse<Param>> {
                     override fun onComplete() {
@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
     private fun login() {
         HttpUtils.createApiService()!!
                 .login(LoginReq("login", LoginReqParams("9F97E500-DDEE-4018-AD91-96617C6E1653", "login",
-                        "Test@123456", "zhangs")))
+                        "123456", "465798")))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : Observer<LoginBean> {

@@ -36,7 +36,7 @@ object HttpUtils {
                                 Log.e("Https===>  ", logger)
                             }.setLevel(HttpLoggingInterceptor.Level.BODY)
                             )
-                            .build()).baseUrl("https://gw.dev.cmrh.com:5001/")
+                            .build()).baseUrl(Const.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build()

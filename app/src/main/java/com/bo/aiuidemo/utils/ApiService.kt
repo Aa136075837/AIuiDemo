@@ -12,9 +12,9 @@ import retrofit2.http.POST
  */
 interface ApiService {
 
-    @POST("login")
+    @POST(Const.LOGIN)
     fun login(@Body bean: LoginReq): Observable<LoginBean>
 
-    @POST("RH_MAS/bus/v1.0/ams/applyForLeave")
+    @POST(Const.APPLY_FOR_LEAVE)
     fun applyForLeave(@HeaderMap headers: Map<String, String>, @Body bean: ApplyForLeaveReq): Observable<BaseResponse<Param>>
 }
